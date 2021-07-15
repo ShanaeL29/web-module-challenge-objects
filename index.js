@@ -17,11 +17,11 @@ The function should:
 //using the function below to return an object with the keys name, price, category
 
 function createMenuItem(name, price, category) {
-  const menuItem = { name, price, category, };
+  const menuItem = { name, price, category };
   return menuItem
 }
 
-console.log("task 1a", createMenuItem("tacos", 8, "lunch"));
+console.log("task 1a", createMenuItem("beef tacos", 8, "lunch"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -60,9 +60,10 @@ const burger = {
   category: "Lunch",
   discount: function (string) {
     if (string === "teacher" || string === "student") {
-      return burger.price * .75
-    } else
-      return burger.price * .90
+      return burger.price * .75;
+    } else {
+      return burger.price * .90;
+    }
   }
 }
 
@@ -111,19 +112,18 @@ Use the addReview function below to do the following:
   3. The function should push the following object to the array: {name: 'Daniela', rating: 5, review: 'Beautiful atmosphere and wonderful vegan options!' }
   4. should return the resulting array
 */
-
 //create an object
 //const object = {name, rating, review}
 //push that object to the array
 
 function addReview(array, name, rating, feedback) {
   //reassigning the value of a key inside of an object inside of an array
-  //   array.push({ name, rating, feedback })
-  //   return array;
-  // }
-
-  // console.log(changeValue(reviews, "Daniela", 5, "Beautiful atmosphere and wonderful vegan options!"))
+  array.push({ name, rating, feedback });
+  return array;
 }
+
+console.log(addReview(reviews, "Daniela", 5, "Beautiful atmosphere and wonderful vegan options!"))
+
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -139,11 +139,11 @@ Use the getReviewByIndex function below to do the following:
 // 2 parameters = an array, a number
 // return the array[number].feedback
 
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+function getReviewByIndex(array, index) {
+  return `${array[index].name} gave the restaurant a ${array[index].rating} star review, and their feedback was: ${array[index].feedback}`
 }
 
-
+console.log(getReviewByIndex(reviews, 2));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
