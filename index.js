@@ -60,9 +60,9 @@ const burger = {
   category: "Lunch",
   discount: function (string) {
     if (string === "teacher" || string === "student") {
-      return burger.price * .75;
+      return this.price * .75;
     } else {
-      return burger.price * .90;
+      return this.price * .90;
     }
   }
 }
@@ -122,7 +122,7 @@ function addReview(array, name, rating, feedback) {
   return array;
 }
 
-console.log(addReview(reviews, "Daniela", 5, "Beautiful atmosphere and wonderful vegan options!"))
+console.log(addReview(reviews, "Daniela", 5, "Beautiful atmosphere and wonderful vegan options!"));
 
 
 
@@ -185,7 +185,7 @@ Use the getReviewsByRating function below to do the following:
   ]
 */
 
-function getReviewByRating(/* code here */) {
+function getReviewByRating(array, rating) {
   /* code here */
 }
 
