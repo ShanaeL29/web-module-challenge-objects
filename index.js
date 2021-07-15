@@ -58,7 +58,7 @@ const burger = {
   price: 18,
   category: "Lunch",
   discount: function (string) {
-    if (string === "teacher" || string === "students") {
+    if (string === "teacher" || string === "student") {
       return burger.price * .75
     } else
       return burger.price * .90
@@ -86,6 +86,7 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
+console.log("task 3", reviews[5].feedback);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -94,9 +95,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
-console.log(reviews);
-
-
+console.log("task 4", reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
