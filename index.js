@@ -14,14 +14,11 @@ The function should:
   
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
+//using the function below to return an object with the keys name, price, category
 
 function createMenuItem(name, price, category) {
-  const menuItem = {
-    name: name,
-    price: price,
-    category: category,
-  }
-  return menuItem;
+  const menuItem = { name, price, category, };
+  return menuItem
 }
 
 console.log("task 1a", createMenuItem("tacos", 8, "lunch"));
@@ -53,6 +50,10 @@ Using the burger object below do the following:
 
   For example: burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2
 */
+
+//creating a method called discount - and it takes a parameter of customre and it gives a discount based on the argument passed in
+//student or teacher the discount should be 25% off the price - hint you will need to reference this.price
+
 const burger = {
   name: "Burger",
   price: 18,
@@ -86,6 +87,8 @@ Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
 
+//not tested just need to console.log ONLY Julius' feedback
+
 console.log("task 3", reviews[5].feedback);
 
 
@@ -94,22 +97,34 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   1. Add this feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
   2. log the reviews array to the console to check your work
 */
+
+
 reviews[7].feedback = 'this place is chill with really cool people, great for getting work done on weekdays';
 console.log("task 4", reviews);
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function that creates an object with name, rating, feedback, add the new review to the end of an array and returns the resulting array
- the addReview function below to do the following:
+Use the addReview function below to do the following:
   1. Receive an array
   2. Receive the following object keys name, rating, feedback
   3. The function should push the following object to the array: {name: 'Daniela', rating: 5, review: 'Beautiful atmosphere and wonderful vegan options!' }
   4. should return the resulting array
 */
 
-function addReview(/*Your Code Here */) {
-  /*Your Code Here */
+//create an object
+//const object = {name, rating, review}
+//push that object to the array
+
+function addReview(array, name, rating, feedback) {
+  //reassigning the value of a key inside of an object inside of an array
+  //   array.push({ name, rating, feedback })
+  //   return array;
+  // }
+
+  // console.log(changeValue(reviews, "Daniela", 5, "Beautiful atmosphere and wonderful vegan options!"))
 }
+
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -121,6 +136,8 @@ Use the getReviewByIndex function below to do the following:
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
 
+// 2 parameters = an array, a number
+// return the array[number].feedback
 
 function getReviewByIndex(/*Your code here*/) {
   /*Your code here*/
@@ -141,10 +158,15 @@ Use the getLastReview function below to do the following:
 */
 
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+
+function getLastReview(array) {
+  return `${array[array.length - 1].name} gave the restaurant a ${array[array.length - 1].rating} star review, and their feedback was: ${array[array.length - 1].feedback}`
 }
 
+console.log(getLastReview(reviews));
+
+//array as a param
+//return the last index as a string so make sure your string is matching the above in the instructions
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
